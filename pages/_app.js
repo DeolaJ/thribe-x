@@ -1,14 +1,29 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import Head from "next/head";
+import { ChakraProvider, Box } from "@chakra-ui/react";
 import { AnimatePresence } from "framer-motion";
 
 import { theme } from "../styles/theme";
 
+import scatter from "../public/images/background/scatter.svg";
+
 export default function App({ Component, pageProps }) {
     return (
-        <ChakraProvider theme={theme}>
-            <AnimatePresence mode="wait">
-                <Component {...pageProps} />
-            </AnimatePresence>
-        </ChakraProvider>
+        <>
+            <Head>
+                <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </Head>
+            <ChakraProvider theme={theme}>
+                <AnimatePresence mode="wait">
+                    <Box
+                        bgImage={`url(${scatter.src})`}
+                        bgRepeat="repeat"
+                        backgroundSize={{ base: "350%", sm: "initial" }}
+                    >
+                        <Component {...pageProps} />
+                    </Box>
+                </AnimatePresence>
+            </ChakraProvider>
+        </>
     );
 }

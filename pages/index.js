@@ -12,8 +12,11 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Thribe X</title>
-                <meta name="description" content="Youthful expression of the convenant nation" />
+                <title>Thribe-X</title>
+                <meta
+                    name="description"
+                    content="Welcome to Thribe-X, The Youthful Expression of The Covenant Nation, Iganmu"
+                />
             </Head>
 
             <>
