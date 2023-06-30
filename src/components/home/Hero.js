@@ -1,6 +1,6 @@
 import { Heading, Text, Box, ButtonGroup, Center, Link } from "@chakra-ui/react";
 
-import PrimaryButton from "./button/PrimaryButton";
+import PrimaryButton from "../button/PrimaryButton";
 
 function Hero() {
     return (
