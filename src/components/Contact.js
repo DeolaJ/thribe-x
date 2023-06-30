@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Text, Box, Heading, Link } from "@chakra-ui/react";
+
 import PrimaryButton from "./button/PrimaryButton";
 
 function Contact({ ...props }) {

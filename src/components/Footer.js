@@ -19,7 +19,7 @@ function Footer({ ...props }) {
         <Flex py="4" px="4" w="100%" {...props}>
             <Flex
                 justifyContent={{ base: "flex-start", md: "space-between" }}
-                gap={{ base: "4", md: "6" }}
+                gap={{ base: "1", md: "6" }}
                 borderTop="1px solid"
                 borderColor="brand.gray.30"
                 flexDir={{ base: "column-reverse", md: "row" }}
@@ -32,7 +32,9 @@ function Footer({ ...props }) {
                     gap={{ base: "3", md: "6" }}
                     flexDir={{ base: "column", md: "row" }}
                 >
-                    <Text color="brand.gray.30">© {new Date().getFullYear()} Thribe-x team.</Text>
+                    <Text color="brand.gray.30" fontSize={{ base: "sm", md: "md" }}>
+                        © {new Date().getFullYear()} Thribe-X team.
+                    </Text>
                 </Flex>
                 <Flex alignItems="center" gap="2">
                     {socials.map((social) => (
@@ -44,7 +46,7 @@ function Footer({ ...props }) {
                         >
                             <IconButton
                                 icon={social.icon}
-                                fontSize="xl"
+                                fontSize={{ base: "md", md: "xl" }}
                                 color="brand.gray.30"
                                 bg="transparent"
                                 p="0"

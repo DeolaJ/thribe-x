@@ -1,12 +1,12 @@
 import Head from "next/head";
 
 import Header from "../src/components/Header";
-import Hero from "../src/components/Hero";
-import Footer from "../src/components/Footer";
-import About from "../src/components/About";
-import Teams from "../src/components/Teams";
-import DNA from "../src/components/DNA";
+import Hero from "../src/components/home/Hero";
+import About from "../src/components/home/About";
+import Teams from "../src/components/home/Teams";
+import DNA from "../src/components/home/DNA";
 import Contact from "../src/components/Contact";
+import Footer from "../src/components/Footer";
 
 export default function Home() {
     return (
@@ -14,8 +14,6 @@ export default function Home() {
             <Head>
                 <title>Thribe X</title>
                 <meta name="description" content="Youthful expression of the convenant nation" />
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <>
