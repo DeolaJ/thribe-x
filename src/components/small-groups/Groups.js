@@ -3,31 +3,31 @@ import { Heading, Box, Grid, GridItem, Image } from "@chakra-ui/react";
 
 const list = [
     {
-        title: "Mental Health",
+        title: "Fortress & Zion",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143241/thribe-x/mental-health_blzyzs.png",
     },
     {
-        title: "Career Growth",
+        title: "Megaminds",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143237/thribe-x/career_nqatyo.png",
     },
     {
-        title: "Relationship",
+        title: "Wholesome Cuts",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143243/thribe-x/relationship_qsbxd5.png",
     },
     {
-        title: "Friendship",
+        title: "Lifelines",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143241/thribe-x/friendship_qzypsc.png",
     },
     {
-        title: "Unemployment",
+        title: "Hired",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143243/thribe-x/unemployment_kdrees.png",
     },
     {
-        title: "Spiritual Growth",
+        title: "Adullam",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143242/thribe-x/spiritual_hagmua.png",
     },
     {
-        title: "Undergraduates",
+        title: "NextGen",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143240/thribe-x/undergrad_dkxk1r.png",
     },
 ];
@@ -95,7 +95,7 @@ function Groups({ ...props }) {
                                 mb="3"
                                 fontWeight={700}
                             >
-                                {listItem.title} Small Group
+                                {listItem.title}
                             </Heading>
                         </GridItem>
                         <GridItem

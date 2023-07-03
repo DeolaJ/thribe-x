@@ -11,20 +11,20 @@ function About({ ...props }) {
             {...props}
         >
             <Grid
-                templateColumns={{ base: "1fr", md: "1.05fr 1fr" }}
+                templateColumns={{ base: "1fr", lg: "1.05fr 1fr" }}
                 mx="auto"
                 alignItems="center"
                 maxW="8xl"
                 placeContent="center"
             >
                 <GridItem
-                    maxW={{ base: "550px", md: "550px" }}
+                    maxW="550px"
                     mx="auto"
-                    mb={{ base: "12", md: "0" }}
-                    mt={{ base: "0", md: "0" }}
+                    mb={{ base: "12", lg: "0" }}
+                    mt={{ base: "0", lg: "0" }}
                 >
                     <Image
-                        alt="picture of a believer walkingz"
+                        alt="picture of a believer walking"
                         src="https://res.cloudinary.com/dzpntisxj/image/upload/v1688143619/thribe-x/chosen2_qd0vs0.jpg"
                         width={2700}
                         height={1600}
@@ -41,18 +41,32 @@ function About({ ...props }) {
                             values growth and connection.
                         </Text>
                         <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
-                            Welcome to The Glass House, where our small groups embody the principles
-                            of openness, transparency, support, growth, fostering personal and
-                            collective development in a fun and engaging way! Just like a Glass
-                            House, our small groups provide a unique environment that allows you to
-                            flourish and thrive.
+                            Welcome to the Glass House, a vibrant community where openness, support,
+                            and growth intertwine to create an extraordinary experience. Imagine
+                            entering a glass house where transparency and authenticity reign. In our
+                            small groups, we foster an environment that encourages you to freely
+                            express your thoughts, challenges, and triumphs without fear of
+                            judgment. Embrace the power of genuine connections as you embark on a
+                            journey of self-discovery and personal growth.
                         </Text>
                         <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
-                            Imagine stepping into a magnificent Glass House. The transparent walls
-                            symbolize the openness and honesty we embrace within our small groups.
-                            Just as the glass walls let in abundant natural light, our groups foster
-                            an atmosphere of openness, where you can freely share your thoughts,
-                            experiences, and challenges without fear of judgment.
+                            {`Just as a glass house allows natural light to illuminate its
+                            surroundings, our small groups illuminate the path to personal
+                            development and fulfillment. Within this transparent space, you'll find
+                            a tribe of kindred spirits, ready to journey alongside you, offering
+                            encouragement, guidance, and unwavering support. Together, we'll
+                            cultivate an atmosphere that nurtures your dreams, fosters resilience,
+                            and empowers you to embrace your full potential.`}
+                        </Text>
+                        <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
+                            {`In the Glass House, growth is not only encouraged, but celebrated. We
+                            provide a rich tapestry of learning opportunities, self-reflection
+                            exercises, and practical tools that will equip you to thrive in various
+                            areas of your life. As you engage with our fun and engaging activities,
+                            you'll form lasting bonds, share laughter, and create cherished
+                            memories. Join us in the Glass House and embark on a transformative
+                            adventure, where you'll discover the beauty of personal growth,
+                            authentic connections, and a community that uplifts and inspires.`}
                         </Text>
                     </VStack>
                 </GridItem>

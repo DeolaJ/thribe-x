@@ -17,8 +17,8 @@ export default function App({ Component, pageProps }) {
                 <AnimatePresence mode="wait">
                     <Box
                         bgImage={`url(${scatter.src})`}
-                        bgRepeat="repeat"
-                        backgroundSize={{ base: "350%", sm: "initial" }}
+                        bgRepeat={{ base: "repeat", md: "round" }}
+                        backgroundSize={{ base: "1000px 60vh", xl: "initial" }}
                     >
                         <Component {...pageProps} />
                     </Box>
