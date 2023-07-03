@@ -17,6 +17,10 @@ export default function Home() {
                     name="description"
                     content="Welcome to Thribe-X, The Youthful Expression of The Covenant Nation, Iganmu"
                 />
+                <meta
+                    name="keywords"
+                    content="thribe-x, covenant nation, youth, youth church, thribe x"
+                />
             </Head>
 
             <>

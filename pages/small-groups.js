@@ -19,6 +19,10 @@ export default function SmallGroups() {
                     name="description"
                     content="Welcome to The Glass House, where our small groups embody the principles of openness, transparency, support, growth, fostering personal and collective development in a fun and engaging way!"
                 />
+                <meta
+                    name="keywords"
+                    content="thribe-x, covenant nation, youth, youth church, glass house, small groups, thribe-x small groups"
+                />
             </Head>
             <>
                 <Header />
