@@ -26,23 +26,35 @@ export const theme = extendTheme({
         brand: {
             orange: {
                 100: "#ff9966",
+                200: "#f5bb84",
                 500: "#dc785d", // For colorScheme solid color
+                600: "#e2842f",
+                700: "#e98b4d",
             },
             brown: {
                 500: "#c07253", // For colorScheme solid color
             },
             blue: {
+                100: "#16a0ce",
                 500: "#84bcc0",
+                600: "#95d5dd",
             },
             gray: {
                 500: "#cebaab",
             },
             yellow: {
-                100: "#f3bf40",
+                100: "#f3ca3f",
+                200: "#f5e04f",
                 500: "#e5bd66",
+                600: "#eed173",
             },
             black: {
                 100: "#1b1c1d",
+            },
+            purple: {
+                100: "#c78db5",
+                200: "#a04f89",
+                500: "#9f2d9d",
             },
         },
     },
