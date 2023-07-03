@@ -8,6 +8,7 @@ import About from "../src/components/small-groups/About";
 import WhyJoinUs from "../src/components/small-groups/WhyJoinUs";
 import Contact from "../src/components/small-groups/Contact";
 import Groups from "../src/components/small-groups/Groups";
+import FAQs from "../src/components/small-groups/FAQs";
 
 export default function SmallGroups() {
     return (
@@ -25,6 +26,7 @@ export default function SmallGroups() {
                 <About />
                 <WhyJoinUs />
                 <Groups />
+                <FAQs />
                 <Contact />
                 <Footer />
             </>
