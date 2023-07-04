@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import { usePathname } from "next/navigation";
+
 import Image from "next/image";
 import {
     Flex,
@@ -43,6 +45,8 @@ function Header({ ...props }) {
 }
 
 function DesktopMenu() {
+    const pathname = usePathname();
+    const isSmallGroup = pathname?.includes("small-groups");
     return (
         <Flex
             alignItems="center"
@@ -53,7 +57,14 @@ function DesktopMenu() {
             <ChakraNextLink
                 href="/small-groups"
                 fontWeight={500}
-                _hover={{ textDecoration: "none", borderBottom: "1px solid", borderColor: "black" }}
+                borderBottom={isSmallGroup ? "1px solid" : ""}
+                borderColor={isSmallGroup ? "black" : ""}
+                _hover={{
+                    textDecoration: "none",
+                    borderBottom: "1px solid",
+                    borderColor: isSmallGroup ? "brand.purple.200" : "black",
+                    color: isSmallGroup ? "brand.purple.200" : "",
+                }}
             >
                 Small groups
             </ChakraNextLink>
@@ -74,6 +85,8 @@ function DesktopMenu() {
 function MobileMenu() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
+    const pathname = usePathname();
+    const isSmallGroup = pathname?.includes("small-groups");
 
     return (
         <>
@@ -101,10 +114,14 @@ function MobileMenu() {
                             <ChakraNextLink
                                 href="/small-groups"
                                 fontWeight={500}
+                                borderBottom={isSmallGroup ? "1px solid" : ""}
+                                borderColor={isSmallGroup ? "black" : ""}
+                                width="fit-content"
                                 _hover={{
                                     textDecoration: "none",
                                     borderBottom: "1px solid",
-                                    borderColor: "black",
+                                    borderColor: isSmallGroup ? "brand.purple.200" : "black",
+                                    color: isSmallGroup ? "brand.purple.200" : "",
                                 }}
                             >
                                 Small groups
