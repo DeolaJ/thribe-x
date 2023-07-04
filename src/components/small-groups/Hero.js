@@ -56,7 +56,7 @@ function Hero() {
                     </Box>
                 </GridItem>
                 <GridItem h="100%" order={{ base: "-1", md: "1" }}>
-                    <Box mx="auto" maxW="550px" mt={{ md: "6" }} w="100%">
+                    <Box mx="auto" maxW="550px" w="100%">
                         <Image
                             width={2700}
                             height={2700}

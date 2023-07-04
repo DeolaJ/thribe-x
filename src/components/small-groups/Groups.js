@@ -1,34 +1,43 @@
 import React from "react";
-import { Heading, Box, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Heading, Box, Grid, GridItem, Image, Icon } from "@chakra-ui/react";
+import Link from "next/link";
+import { BiLinkExternal } from "react-icons/bi";
 
 const list = [
     {
         title: "Fortress & Zion",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143241/thribe-x/mental-health_blzyzs.png",
+        url: "/small-groups/mental-health",
     },
     {
         title: "Megaminds",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143237/thribe-x/career_nqatyo.png",
+        url: "/small-groups/career-growth",
     },
     {
         title: "Wholesome Cuts",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143243/thribe-x/relationship_qsbxd5.png",
+        url: "/small-groups/relationships",
     },
     {
         title: "Lifelines",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143241/thribe-x/friendship_qzypsc.png",
+        url: "/small-groups/friendship",
     },
     {
         title: "Hired",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143243/thribe-x/unemployment_kdrees.png",
+        url: "/small-groups/unemployment",
     },
     {
         title: "Adullam",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143242/thribe-x/spiritual_hagmua.png",
+        url: "/small-groups/spiritual-growth",
     },
     {
         title: "NextGen",
         image: "https://res.cloudinary.com/dzpntisxj/image/upload/v1688143240/thribe-x/undergrad_dkxk1r.png",
+        url: "/small-groups/undergraduates",
     },
 ];
 
@@ -85,18 +94,28 @@ function Groups({ ...props }) {
                         <GridItem
                             area={`section-${index + 1}-content`}
                             justifySelf={index % 2 === 1 ? "flex-start" : "flex-end"}
-                            maxW={{ md: "250px" }}
+                            maxW={{ md: "300px" }}
                             mx="auto"
                         >
-                            <Heading
-                                fontSize={{ base: "xl", md: "3xl" }}
-                                textAlign={{ base: "center", md: "left" }}
-                                lineHeight="short"
-                                mb={{ base: "1.5", md: "3" }}
-                                fontWeight={700}
-                            >
-                                {listItem.title}
-                            </Heading>
+                            <Link href={listItem.url} target="_blank">
+                                <Heading
+                                    fontSize={{ base: "xl", md: "3xl" }}
+                                    textAlign={{ base: "center", md: "left" }}
+                                    lineHeight="short"
+                                    mb={{ base: "1.5", md: "3" }}
+                                    fontWeight={700}
+                                    _hover={{ textDecoration: "underline" }}
+                                >
+                                    {listItem.title}
+                                    <Icon
+                                        as={BiLinkExternal}
+                                        boxSize={{ base: "3", md: "5" }}
+                                        mb={{ base: "-1px", md: "-0.5" }}
+                                        ml="2"
+                                        aria-label="icon"
+                                    />
+                                </Heading>
+                            </Link>
                         </GridItem>
                         <GridItem
                             area={`section-${index + 1}-image`}
@@ -105,7 +124,9 @@ function Groups({ ...props }) {
                             mx="auto"
                             mb={{ base: "14", md: "0" }}
                         >
-                            <Image src={listItem.image} alt="subheader image" />
+                            <Link href={listItem.url} target="_blank">
+                                <Image src={listItem.image} alt="subheader image" />
+                            </Link>
                         </GridItem>
                     </React.Fragment>
                 ))}
