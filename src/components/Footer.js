@@ -1,5 +1,5 @@
 import { Flex, IconButton, Text, Link } from "@chakra-ui/react";
-import { FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 function Footer({ ...props }) {
     const socials = [
@@ -11,7 +11,12 @@ function Footer({ ...props }) {
         {
             type: "instagram",
             icon: <FaInstagram />,
-            link: "https://instagram.com/thribe-x",
+            link: "https://instagram.com/thribe_x",
+        },
+        {
+            type: "youtube",
+            icon: <FaYoutube />,
+            link: "https://www.youtube.com/@thribe-x",
         },
     ];
 
@@ -40,7 +45,7 @@ function Footer({ ...props }) {
                     {socials.map((social) => (
                         <Link
                             key={social.type}
-                            route={social.link}
+                            href={social.link}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
