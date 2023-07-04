@@ -89,10 +89,10 @@ function Groups({ ...props }) {
                             mx="auto"
                         >
                             <Heading
-                                fontSize={{ base: "lg", md: "3xl" }}
+                                fontSize={{ base: "xl", md: "3xl" }}
                                 textAlign={{ base: "center", md: "left" }}
                                 lineHeight="short"
-                                mb="3"
+                                mb={{ base: "1.5", md: "3" }}
                                 fontWeight={700}
                             >
                                 {listItem.title}
@@ -101,9 +101,9 @@ function Groups({ ...props }) {
                         <GridItem
                             area={`section-${index + 1}-image`}
                             justifySelf={{ base: "flex-start", md: "flex-end" }}
-                            maxW="450px"
+                            maxW={{ base: "300px", md: "400px" }}
                             mx="auto"
-                            mb={{ base: "24", md: "0" }}
+                            mb={{ base: "14", md: "0" }}
                         >
                             <Image src={listItem.image} alt="subheader image" />
                         </GridItem>

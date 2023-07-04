@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Text, Box, Grid, GridItem, VStack, Heading } from "@chakra-ui/react";
+import { Text, Box, Grid, GridItem, VStack, Heading, chakra } from "@chakra-ui/react";
 
 function About({ ...props }) {
     return (
@@ -41,22 +41,19 @@ function About({ ...props }) {
                             values growth and connection.
                         </Text>
                         <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
-                            Welcome to the Glass House, a vibrant community where openness, support,
-                            and growth intertwine to create an extraordinary experience. Imagine
+                            Welcome to the Glass House, a community where openness, support, and
+                            growth intertwine to create an extraordinary experience. Imagine
                             entering a glass house where transparency and authenticity reign. In our
                             small groups, we foster an environment that encourages you to freely
                             express your thoughts, challenges, and triumphs without fear of
-                            judgment. Embrace the power of genuine connections as you embark on a
-                            journey of self-discovery and personal growth.
+                            judgment.
                         </Text>
                         <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
                             {`Just as a glass house allows natural light to illuminate its
                             surroundings, our small groups illuminate the path to personal
                             development and fulfillment. Within this transparent space, you'll find
                             a tribe of kindred spirits, ready to journey alongside you, offering
-                            encouragement, guidance, and unwavering support. Together, we'll
-                            cultivate an atmosphere that nurtures your dreams, fosters resilience,
-                            and empowers you to embrace your full potential.`}
+                            encouragement, guidance, and unwavering support.`}
                         </Text>
                         <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
                             {`In the Glass House, growth is not only encouraged, but celebrated. We
@@ -64,9 +61,13 @@ function About({ ...props }) {
                             exercises, and practical tools that will equip you to thrive in various
                             areas of your life. As you engage with our fun and engaging activities,
                             you'll form lasting bonds, share laughter, and create cherished
-                            memories. Join us in the Glass House and embark on a transformative
-                            adventure, where you'll discover the beauty of personal growth,
-                            authentic connections, and a community that uplifts and inspires.`}
+                            memories.`}
+                        </Text>
+                        <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
+                            Step into the Glass House and let the journey begin!{" "}
+                            <chakra.span fontWeight={700}>
+                                ON YOUR MARKS, LEARN, GROW, THRIVE!!!
+                            </chakra.span>
                         </Text>
                     </VStack>
                 </GridItem>

@@ -7,8 +7,8 @@ function Hero() {
     return (
         <Box
             as="section"
-            pt={{ base: "12", md: "60" }}
-            pb={{ base: "10", md: "48" }}
+            pt={{ base: "12", md: "20" }}
+            pb={{ base: "10", md: "24" }}
             px={{ base: "6", md: "16" }}
         >
             <Grid
@@ -56,7 +56,7 @@ function Hero() {
                     </Box>
                 </GridItem>
                 <GridItem h="100%" order={{ base: "-1", md: "1" }}>
-                    <Box mx="auto" maxW="550px" mt={{ md: "12" }} w="100%">
+                    <Box mx="auto" maxW="550px" mt={{ md: "6" }} w="100%">
                         <Image
                             width={2700}
                             height={2700}

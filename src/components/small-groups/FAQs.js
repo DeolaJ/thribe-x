@@ -40,11 +40,11 @@ const questions = [
     },
     {
         title: "When does the Glass House commence?",
-        description: "The Glass House commences on...",
+        description: "The Glass House commences on July 16, 2023.",
     },
     {
         title: "When does registration end?",
-        description: "Registration for the Glass House will close on...",
+        description: "Registration for the Glass House will close on July 30, 2023.",
     },
     {
         title: "Can I join more than one group?",
@@ -93,7 +93,7 @@ function FAQs({ ...props }) {
                 <Grid
                     templateColumns={{
                         base: "1fr",
-                        md: "minmax(300px, 500px) minmax(300px, 500px)",
+                        md: "minmax(200px, 500px) minmax(200px, 500px)",
                         lg: "minmax(300px, 400px) minmax(300px, 400px) minmax(300px, 400px)",
                     }}
                     templateRows="auto"
@@ -121,9 +121,14 @@ function FAQs({ ...props }) {
                             </Text>
                         </GridItem>
                     ))}
-                    <GridItem gridColumn={{ md: "1 / span 2", lg: "1 / span 3" }}>
+                    <GridItem
+                        gridColumn={{
+                            md: "1 / span 2",
+                            lg: "1 / span 3",
+                        }}
+                    >
                         <Text
-                            fontSize={{ base: "lg", md: "xl" }}
+                            fontSize={{ base: "md", md: "xl" }}
                             mt="4"
                             p="5"
                             color="white"
@@ -135,6 +140,7 @@ function FAQs({ ...props }) {
                             <Link
                                 href="mailto:thribe.xsmallgroups@gmail.com"
                                 textDecoration="underline"
+                                wordBreak="break-all"
                             >
                                 thribe.xsmallgroups@gmail.com
                             </Link>{" "}
