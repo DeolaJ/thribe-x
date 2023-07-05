@@ -5,6 +5,7 @@ import Hero from "../src/components/home/Hero";
 import About from "../src/components/home/About";
 import Teams from "../src/components/home/Teams";
 import DNA from "../src/components/home/DNA";
+import DrivingForce from "../src/components/home/DrivingForce";
 import Contact from "../src/components/Contact";
 import Footer from "../src/components/Footer";
 
@@ -24,13 +25,17 @@ export default function Home() {
             </Head>
 
             <>
-                <Header bgColor="brand.gray.500" />
+                <Header
+                    bgImage="linear-gradient(to right, brand.purple.500, brand.orange.100, brand.purple.500)"
+                    isLight
+                />
                 <Hero />
                 <About />
                 <Teams bgColor="brand.orange.100" />
                 <DNA />
-                <Contact bgColor="brand.blue.500" />
-                <Footer bgColor="brand.blue.500" />
+                <DrivingForce bgColor="brand.purple.200" />
+                <Contact />
+                <Footer />
             </>
         </>
     );

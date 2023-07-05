@@ -7,25 +7,28 @@ function Hero() {
         <Box
             as="section"
             bgColor="brand.gray.500"
-            py={{ base: "24", md: "60" }}
-            px={{ base: "12", md: "16" }}
+            pt={{ base: "52", md: "60" }}
+            pb={{ base: "24", md: "72" }}
+            px={{ base: "8", md: "16" }}
+            bgImage="linear-gradient(to right, brand.purple.500, brand.orange.100, brand.purple.500)"
+            mixBlendMode="multiply"
         >
             <Center maxW="8xl" mx="auto">
-                <Box flexDir="column" mb={{ base: "14", md: "0" }} textAlign="center">
+                <Box flexDir="column" mb={{ base: "14", md: "0" }} textAlign="center" color="white">
                     <Heading
                         fontWeight={700}
-                        fontSize={{ base: "5xl", sm: "6xl", md: "8xl" }}
+                        fontSize={{ base: "3xl", sm: "5xl", md: "6xl", xl: "8xl" }}
                         lineHeight={{ base: "1.125", md: "1.25" }}
                     >
                         Welcome to Thribe-X
                     </Heading>
                     <Text
-                        fontSize={{ base: "lg", md: "xl" }}
-                        mt="7"
-                        mb="7"
+                        fontSize={{ base: "md", md: "xl" }}
+                        mt="3"
+                        mb="5"
                         maxW={{ base: "300px", sm: "450px", md: "initial" }}
                         mx="auto"
-                        lineHeight="shorter"
+                        lineHeight={{ base: "short", md: "shorter" }}
                     >
                         We are the youthful expression of the Covenant Nation, Iganmu Campus.
                     </Text>

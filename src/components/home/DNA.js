@@ -1,5 +1,14 @@
 import Image from "next/image";
-import { Text, Box, Grid, GridItem, Flex, Heading } from "@chakra-ui/react";
+import {
+    Text,
+    Box,
+    Grid,
+    GridItem,
+    Flex,
+    Heading,
+    Divider,
+    AbsoluteCenter,
+} from "@chakra-ui/react";
 
 function DNA({ ...props }) {
     return (
@@ -7,113 +16,215 @@ function DNA({ ...props }) {
             as="section"
             pt={{ base: "24", md: "28" }}
             pb={{ base: "24", md: "40" }}
-            px={{ base: "12", md: "16" }}
+            px={{ base: "6", md: "16" }}
             {...props}
         >
-            <Heading
-                textAlign="center"
-                size="xl"
-                mb={{ base: "12", md: "24" }}
-                textTransform="uppercase"
-            >
-                Our DNA
-            </Heading>
-            <Grid
-                templateColumns={{ base: "1fr", md: "1fr 1.05fr 1fr" }}
-                minH={{ md: "50vh", "2xl": "55vh" }}
-                mx="auto"
-                alignItems="center"
-                maxW="8xl"
-                placeContent="center"
-            >
-                <GridItem>
-                    <Flex
-                        flexDir="column"
-                        gap="10"
-                        alignItems="center"
-                        mb={{ base: "16", md: "0" }}
+            <Box maxW="8xl" mx="auto">
+                <Heading
+                    textAlign="center"
+                    fontSize={{ base: "xl", md: "3xl" }}
+                    mb={{ base: "8", md: "12" }}
+                >
+                    <Box position="relative" padding={{ md: "10" }}>
+                        <Divider borderColor="black" />
+                        <AbsoluteCenter px="4" bgColor="white">
+                            Building blocks
+                        </AbsoluteCenter>
+                    </Box>
+                </Heading>
+                <Grid
+                    templateColumns={{ base: "1fr", lg: "1fr 1.05fr 1fr" }}
+                    mx="auto"
+                    alignItems="center"
+                    maxW="8xl"
+                    placeContent="center"
+                >
+                    <GridItem>
+                        <Flex
+                            flexDir="column"
+                            gap="10"
+                            alignItems="center"
+                            mb={{ base: "10", lg: "0" }}
+                        >
+                            <Box
+                                p="3"
+                                border="2px solid"
+                                borderColor="black"
+                                maxW="60"
+                                width={{ base: "100%", sm: "52", md: "56" }}
+                            >
+                                <Text
+                                    bgColor="black"
+                                    pt="3"
+                                    px="1"
+                                    pb="0"
+                                    fontSize={{ base: "2xl", md: "4xl" }}
+                                    color="white"
+                                    fontWeight={700}
+                                    mb="2"
+                                    lineHeight="none"
+                                    width="fit-content"
+                                >
+                                    01
+                                </Text>
+                                <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.2">
+                                    Meaningful organic <br />
+                                    relationships
+                                </Text>
+                            </Box>
+                            <Box
+                                p="3"
+                                border="2px solid"
+                                borderColor="black"
+                                maxW="60"
+                                width={{ base: "100%", sm: "52", md: "56" }}
+                            >
+                                <Text
+                                    bgColor="black"
+                                    pt="3"
+                                    px="1"
+                                    pb="0"
+                                    fontSize={{ base: "2xl", md: "4xl" }}
+                                    color="white"
+                                    fontWeight={700}
+                                    mb="2"
+                                    lineHeight="none"
+                                    width="fit-content"
+                                >
+                                    02
+                                </Text>
+                                <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.2">
+                                    Effective cell systems <br />
+                                    and small groups
+                                </Text>
+                            </Box>
+                            <Box
+                                p="3"
+                                border="2px solid"
+                                borderColor="black"
+                                maxW="60"
+                                width={{ base: "100%", sm: "52", md: "56" }}
+                            >
+                                <Text
+                                    bgColor="black"
+                                    pt="3"
+                                    px="1"
+                                    pb="0"
+                                    fontSize={{ base: "2xl", md: "4xl" }}
+                                    color="white"
+                                    fontWeight={700}
+                                    mb="2"
+                                    lineHeight="none"
+                                    width="fit-content"
+                                >
+                                    03
+                                </Text>
+                                <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.2">
+                                    Powerful praying <br />
+                                    communities
+                                </Text>
+                            </Box>
+                        </Flex>
+                    </GridItem>
+                    <GridItem
+                        h="100%"
+                        mt="12"
+                        maxW={{ base: "300px", lg: "800px" }}
+                        mx="auto"
+                        mb={{ base: "4", md: "0" }}
+                        order={{ base: "-1", lg: "initial" }}
                     >
-                        <Text
-                            fontSize={{ base: "sm", md: "md" }}
-                            lineHeight="short"
-                            p="4"
-                            border="2px solid"
-                            borderColor="brand.black.100"
-                            maxW={{ base: "60", md: "48" }}
-                            textAlign="center"
-                        >
-                            Meaningful organic relationships
-                        </Text>
-                        <Text
-                            fontSize={{ base: "sm", md: "md" }}
-                            lineHeight="short"
-                            p="4"
-                            border="2px solid"
-                            borderColor="brand.black.100"
-                            maxW={{ base: "60", md: "48" }}
-                            textAlign="center"
-                        >
-                            Powerful praying communities
-                        </Text>
-                        <Text
-                            fontSize={{ base: "sm", md: "md" }}
-                            lineHeight="short"
-                            p="4"
-                            border="2px solid"
-                            borderColor="brand.black.100"
-                            maxW={{ base: "60", md: "48" }}
-                            textAlign="center"
-                        >
-                            Spontaneous worshippers
-                        </Text>
-                    </Flex>
-                </GridItem>
-                <GridItem h="100%" mt="12" maxW="800px" mb={{ base: "4", md: "0" }}>
-                    <Image
-                        alt="picture of lady inspired by light"
-                        src="https://res.cloudinary.com/dzpntisxj/image/upload/v1680716895/thribe-x/light_tfuzxv.png"
-                        width={700}
-                        height={840}
-                    />
-                </GridItem>
-                <GridItem>
-                    <Flex flexDir="column" gap="10" alignItems="center">
-                        <Text
-                            fontSize={{ base: "sm", md: "md" }}
-                            lineHeight="short"
-                            p="4"
-                            border="2px solid"
-                            borderColor="brand.black.100"
-                            maxW={{ base: "60", md: "48" }}
-                            textAlign="center"
-                        >
-                            Effective cell systems and small groups
-                        </Text>
-                        <Text
-                            fontSize={{ base: "sm", md: "md" }}
-                            lineHeight="short"
-                            p="4"
-                            border="2px solid"
-                            borderColor="brand.black.100"
-                            maxW={{ base: "60", md: "48" }}
-                            textAlign="center"
-                        >
-                            Devoted bible scholars
-                        </Text>
-                        <Text
-                            fontSize={{ base: "sm", md: "md" }}
-                            lineHeight="short"
-                            p="4"
-                            border="2px solid"
-                            borderColor="brand.black.100"
-                            maxW={{ base: "60", md: "48" }}
-                            textAlign="center"
-                        >
-                            Creative intellectuals
-                        </Text>
-                    </Flex>
-                </GridItem>
-            </Grid>
+                        <Image
+                            alt="picture of lady inspired by light"
+                            src="https://res.cloudinary.com/dzpntisxj/image/upload/v1680716895/thribe-x/light_tfuzxv.png"
+                            width={700}
+                            height={840}
+                        />
+                    </GridItem>
+                    <GridItem>
+                        <Flex flexDir="column" gap="10" alignItems="center">
+                            <Box
+                                p="3"
+                                border="2px solid"
+                                borderColor="black"
+                                maxW="60"
+                                width={{ base: "100%", sm: "52", md: "56" }}
+                            >
+                                <Text
+                                    bgColor="black"
+                                    pt="3"
+                                    px="1"
+                                    pb="0"
+                                    fontSize={{ base: "2xl", md: "4xl" }}
+                                    color="white"
+                                    fontWeight={700}
+                                    mb="2"
+                                    lineHeight="none"
+                                    width="fit-content"
+                                >
+                                    04
+                                </Text>
+                                <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.2">
+                                    Devoted bible <br />
+                                    scholars
+                                </Text>
+                            </Box>
+                            <Box
+                                p="3"
+                                border="2px solid"
+                                borderColor="black"
+                                maxW="60"
+                                width={{ base: "100%", sm: "52", md: "56" }}
+                            >
+                                <Text
+                                    bgColor="black"
+                                    pt="3"
+                                    px="1"
+                                    pb="0"
+                                    fontSize={{ base: "2xl", md: "4xl" }}
+                                    color="white"
+                                    fontWeight={700}
+                                    mb="2"
+                                    lineHeight="none"
+                                    width="fit-content"
+                                >
+                                    05
+                                </Text>
+                                <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.2">
+                                    Spontaneous <br />
+                                    worshippers
+                                </Text>
+                            </Box>
+                            <Box
+                                p="3"
+                                border="2px solid"
+                                borderColor="black"
+                                maxW="60"
+                                width={{ base: "100%", sm: "52", md: "56" }}
+                            >
+                                <Text
+                                    bgColor="black"
+                                    pt="3"
+                                    px="1"
+                                    pb="0"
+                                    fontSize={{ base: "2xl", md: "4xl" }}
+                                    color="white"
+                                    fontWeight={700}
+                                    mb="2"
+                                    lineHeight="none"
+                                    width="fit-content"
+                                >
+                                    06
+                                </Text>
+                                <Text fontSize={{ base: "md", md: "lg" }} lineHeight="1.2">
+                                    Creative <br />
+                                    intellectuals
+                                </Text>
+                            </Box>
+                        </Flex>
+                    </GridItem>
+                </Grid>
+            </Box>
         </Box>
     );
 }

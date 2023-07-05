@@ -21,7 +21,7 @@ import ChakraNextLink from "./ChakraNextLink";
 
 import logo from "../../public/logo.png";
 
-function Header({ ...props }) {
+function Header({ isLight, ...props }) {
     return (
         <Flex
             width="100%"
@@ -38,13 +38,13 @@ function Header({ ...props }) {
             >
                 <Image src={logo.src} alt="Thribe-X logo" width={logo.width} height={logo.height} />
             </ChakraNextLink>
-            <DesktopMenu />
+            <DesktopMenu isLight={isLight} />
             <MobileMenu />
         </Flex>
     );
 }
 
-function DesktopMenu() {
+function DesktopMenu({ isLight }) {
     const pathname = usePathname();
     const isSmallGroup = pathname?.includes("small-groups");
     return (
@@ -58,11 +58,14 @@ function DesktopMenu() {
                 href="/small-groups"
                 fontWeight={500}
                 borderBottom={isSmallGroup ? "1px solid" : ""}
-                borderColor={isSmallGroup ? "black" : ""}
+                borderColor={isSmallGroup ? `${isLight ? "white" : "black"}` : ""}
+                color={isLight ? "white" : ""}
                 _hover={{
                     textDecoration: "none",
                     borderBottom: "1px solid",
-                    borderColor: isSmallGroup ? "brand.purple.200" : "black",
+                    borderColor: isSmallGroup
+                        ? "brand.purple.200"
+                        : `${isLight ? "white" : "black"}`,
                     color: isSmallGroup ? "brand.purple.200" : "",
                 }}
             >

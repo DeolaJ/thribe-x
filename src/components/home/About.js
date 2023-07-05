@@ -6,7 +6,6 @@ function About({ ...props }) {
         <Box as="section" py={{ base: "28", md: "40" }} px={{ base: "12", md: "16" }} {...props}>
             <Grid
                 templateColumns={{ base: "1fr", md: "1.05fr 1fr" }}
-                minH={{ md: "50vh", "2xl": "55vh" }}
                 mx="auto"
                 alignItems="center"
                 maxW="8xl"
@@ -15,7 +14,7 @@ function About({ ...props }) {
                 <GridItem
                     h="100%"
                     mt="12"
-                    maxW={{ base: "400px", md: "800px" }}
+                    maxW={{ base: "300px", md: "450px" }}
                     mx="auto"
                     mb={{ base: "4", md: "0" }}
                 >
@@ -28,7 +27,7 @@ function About({ ...props }) {
                 </GridItem>
                 <GridItem>
                     <Box>
-                        <Text fontSize={{ base: "xl", md: "3xl" }} lineHeight="short">
+                        <Text fontSize={{ base: "xl", md: "2xl" }}>
                             Navigating life can be a lonely and strenuous task. However, going
                             through life with a community that supports, celebrates, prays and helps
                             you grow is a blessing.

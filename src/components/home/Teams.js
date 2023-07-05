@@ -1,17 +1,31 @@
-import { Heading, Box, Grid, GridItem, Flex, Icon, Text } from "@chakra-ui/react";
+import {
+    Heading,
+    Box,
+    Grid,
+    GridItem,
+    Icon,
+    Text,
+    Divider,
+    AbsoluteCenter,
+} from "@chakra-ui/react";
 
 import { TbChessKnight } from "react-icons/tb";
 import { HiOutlineSpeakerphone } from "react-icons/hi";
 import { GiMicrophone, GiStonePath } from "react-icons/gi";
 import { VscSymbolProperty } from "react-icons/vsc";
+import { SiSoundcharts } from "react-icons/si";
 
 const teams = [
     {
-        name: "Big Ops & Amplify",
+        name: "Big Ops",
         icon: VscSymbolProperty,
     },
     {
-        name: "Thribe-x Worship",
+        name: "Amplify",
+        icon: SiSoundcharts,
+    },
+    {
+        name: "Thribe-W Worship",
         icon: GiMicrophone,
     },
     {
@@ -32,19 +46,25 @@ function Teams({ ...props }) {
     return (
         <Box
             as="section"
-            pt={{ base: "20", md: "28" }}
-            pb={{ base: "24", md: "40" }}
-            px={{ base: "12", md: "16" }}
+            pt={{ base: "24", md: "32" }}
+            pb={{ base: "24", md: "32" }}
+            px={{ base: "6", md: "16" }}
+            mixBlendMode="multiply"
             {...props}
         >
             <Box maxW="8xl" mx="auto">
                 <Heading
                     textAlign="center"
-                    size="xl"
+                    fontSize={{ base: "xl", md: "3xl" }}
                     mb={{ base: "12", md: "24" }}
-                    textTransform="uppercase"
+                    mx="auto"
                 >
-                    Teams
+                    <Box position="relative" padding={{ md: "10" }}>
+                        <Divider borderColor="black" />
+                        <AbsoluteCenter px="4" bgColor="brand.orange.100">
+                            Teams
+                        </AbsoluteCenter>
+                    </Box>
                 </Heading>
                 <Grid
                     templateColumns={{
@@ -60,25 +80,25 @@ function Teams({ ...props }) {
                 >
                     {teams.map((team) => (
                         <GridItem key={team.name}>
-                            <Flex
-                                w="14"
-                                h="14"
-                                borderRadius="50%"
-                                bg="white"
-                                border="8px solid"
-                                borderColor="white"
+                            <Box
                                 mb="3"
+                                border="2px solid"
+                                borderRadius="50%"
+                                display="flex"
+                                alignItems="center"
+                                justifyContent="center"
+                                width="10"
+                                height="10"
                                 mx="auto"
                             >
-                                <Icon
-                                    as={team.icon}
-                                    transform="scale(2)"
-                                    m="auto"
-                                    color="brand.orange.100"
-                                    bg="white"
-                                />
-                            </Flex>
-                            <Text fontSize="lg" mb="2" fontWeight={600} textAlign="center">
+                                <Icon as={team.icon} boxSize="5" aria-label="icon" />
+                            </Box>
+                            <Text
+                                fontSize={{ base: "md", md: "lg" }}
+                                mb="2"
+                                fontWeight={600}
+                                textAlign="center"
+                            >
                                 {team.name}
                             </Text>
                         </GridItem>
