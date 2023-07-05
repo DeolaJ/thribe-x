@@ -17,7 +17,7 @@ export default function CareerGrowth() {
                 />
                 <meta
                     name="keywords"
-                    content="thribe-x, covenant nation, youth, youth church, glass house, small groups, thribe-x small groups, career growth small group, nextgen"
+                    content="thribe-x, covenant nation, youth, youth church, glass house, small groups, thribe-x small groups, career growth small group, megaminds"
                 />
             </Head>
             <>

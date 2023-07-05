@@ -17,7 +17,7 @@ export default function Friendship() {
                 />
                 <meta
                     name="keywords"
-                    content="thribe-x, covenant nation, youth, youth church, glass house, small groups, thribe-x small groups, friendship small group, nextgen"
+                    content="thribe-x, covenant nation, youth, youth church, glass house, small groups, thribe-x small groups, friendship small group, lifelines"
                 />
             </Head>
             <>

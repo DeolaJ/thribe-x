@@ -17,7 +17,7 @@ export default function Unemployment() {
                 />
                 <meta
                     name="keywords"
-                    content="thribe-x, covenant nation, youth, youth church, glass house, small groups, thribe-x small groups, Unemployment small group, nextgen"
+                    content="thribe-x, covenant nation, youth, youth church, glass house, small groups, thribe-x small groups, Unemployment small group, hired"
                 />
             </Head>
             <>
