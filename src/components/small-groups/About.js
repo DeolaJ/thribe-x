@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { Text, Box, Grid, GridItem, VStack, Heading, chakra } from "@chakra-ui/react";
+import { useState } from "react";
+import SecondaryButton from "../button/SecondaryButton";
 
 function About({ ...props }) {
+    const [isReadingMore, setIsReadingMore] = useState(false);
+
     return (
         <Box
             as="section"
@@ -37,8 +41,8 @@ function About({ ...props }) {
                     <VStack spacing="4" alignItems="flex-start">
                         <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
                             Welcome to Thribe-X, The Youthful Expression of The Covenant Nation,
-                            Iganmu!!! Thribe-X is a vibrant and youth-oriented church community that
-                            values growth and connection.
+                            Iganmu!!! Thribe-X is a vibrant and youth-oriented christian community
+                            that values growth and connection.
                         </Text>
                         <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
                             Welcome to the Glass House, a community where openness, support, and
@@ -48,27 +52,40 @@ function About({ ...props }) {
                             express your thoughts, challenges, and triumphs without fear of
                             judgment.
                         </Text>
-                        <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
-                            {`Just as a glass house allows natural light to illuminate its
-                            surroundings, our small groups illuminate the path to personal
-                            development and fulfillment. Within this transparent space, you'll find
-                            a tribe of kindred spirits, ready to journey alongside you, offering
-                            encouragement, guidance, and unwavering support.`}
-                        </Text>
-                        <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
-                            {`In the Glass House, growth is not only encouraged, but celebrated. We
-                            provide a rich tapestry of learning opportunities, self-reflection
-                            exercises, and practical tools that will equip you to thrive in various
-                            areas of your life. As you engage with our fun and engaging activities,
-                            you'll form lasting bonds, share laughter, and create cherished
-                            memories.`}
-                        </Text>
-                        <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
-                            Step into the Glass House and let the journey begin!{" "}
-                            <chakra.span fontWeight={700}>
-                                ON YOUR MARKS, LEARN, GROW, THRIVE!!!
-                            </chakra.span>
-                        </Text>
+                        {isReadingMore ? (
+                            <>
+                                <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
+                                    {`Just as a glass house allows natural light to illuminate its
+                                    surroundings, our small groups illuminate the path to personal
+                                    development and fulfillment. Within this transparent space, you'll find
+                                    a tribe of kindred spirits, ready to journey alongside you, offering
+                                    encouragement, guidance, and unwavering support.`}
+                                </Text>
+                                <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
+                                    {`In the Glass House, growth is not only encouraged, but celebrated. We
+                                    provide a rich tapestry of learning opportunities, self-reflection
+                                    exercises, and practical tools that will equip you to thrive in various
+                                    areas of your life. As you engage with our fun and engaging activities,
+                                    you'll form lasting bonds, share laughter, and create cherished
+                                    memories.`}
+                                </Text>
+                                <Text fontSize={{ base: "md", md: "lg" }} fontWeight={400}>
+                                    Step into the Glass House and let the journey begin!{" "}
+                                    <chakra.span fontWeight={700}>
+                                        ON YOUR MARKS, LEARN, GROW, THRIVE!!!
+                                    </chakra.span>
+                                </Text>
+                            </>
+                        ) : (
+                            <SecondaryButton
+                                size="sm"
+                                onClick={() => setIsReadingMore(true)}
+                                bgColor="brand.purple.200"
+                                color="white"
+                            >
+                                Read more
+                            </SecondaryButton>
+                        )}
                     </VStack>
                 </GridItem>
             </Grid>
