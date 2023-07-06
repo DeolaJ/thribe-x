@@ -28,7 +28,7 @@ function DNA({ ...props }) {
                     <Box position="relative" padding={{ md: "10" }}>
                         <Divider borderColor="black" />
                         <AbsoluteCenter px="4" bgColor="white">
-                            Building blocks
+                            Our Building Blocks
                         </AbsoluteCenter>
                     </Box>
                 </Heading>

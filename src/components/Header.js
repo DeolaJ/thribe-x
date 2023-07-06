@@ -18,6 +18,7 @@ import { ImMenu } from "react-icons/im";
 
 import PrimaryButton from "./button/PrimaryButton";
 import ChakraNextLink from "./ChakraNextLink";
+import SecondaryButton from "./button/SecondaryButton";
 
 import logo from "../../public/logo.png";
 
@@ -54,33 +55,41 @@ function DesktopMenu({ isLight }) {
             display={{ base: "none", md: "inherit" }}
             gap="8"
         >
-            <ChakraNextLink
-                href="/small-groups"
-                fontWeight={500}
-                borderBottom={isSmallGroup ? "1px solid" : ""}
-                borderColor={isSmallGroup ? `${isLight ? "white" : "black"}` : ""}
-                color={isLight ? "white" : ""}
-                _hover={{
-                    textDecoration: "none",
-                    borderBottom: "1px solid",
-                    borderColor: isSmallGroup
-                        ? "brand.purple.200"
-                        : `${isLight ? "white" : "black"}`,
-                    color: isSmallGroup ? "brand.purple.200" : "",
-                }}
-            >
-                Small groups
-            </ChakraNextLink>
-            <Link
-                href="https://bit.ly/thribe-x"
-                rel="noopener noreferrer"
-                isExternal
-                target="_blank"
-                fontSize="sm"
-                _hover={{ textDecoration: "none" }}
-            >
-                <PrimaryButton>Join us</PrimaryButton>
-            </Link>
+            {isSmallGroup ? (
+                <>
+                    <ChakraNextLink
+                        href="/small-groups"
+                        fontWeight={500}
+                        borderBottom={isSmallGroup ? "1px solid" : ""}
+                        borderColor={isSmallGroup ? `${isLight ? "white" : "black"}` : ""}
+                        color={isLight ? "white" : ""}
+                        _hover={{
+                            textDecoration: "none",
+                            borderBottom: "1px solid",
+                            borderColor: isSmallGroup
+                                ? "brand.purple.200"
+                                : `${isLight ? "white" : "black"}`,
+                            color: isSmallGroup ? "brand.purple.200" : "",
+                        }}
+                    >
+                        Small groups
+                    </ChakraNextLink>
+                    <Link
+                        href="https://bit.ly/thribe-x"
+                        rel="noopener noreferrer"
+                        isExternal
+                        target="_blank"
+                        fontSize="sm"
+                        _hover={{ textDecoration: "none" }}
+                    >
+                        <PrimaryButton>Join us</PrimaryButton>
+                    </Link>
+                </>
+            ) : (
+                <ChakraNextLink href="/small-groups">
+                    <SecondaryButton>Small groups</SecondaryButton>
+                </ChakraNextLink>
+            )}
         </Flex>
     );
 }
@@ -114,30 +123,40 @@ function MobileMenu() {
                     <DrawerCloseButton />
                     <DrawerBody display="flex" flexDir="column" justifyContent="center" margin="4">
                         <Flex flexDir="column" gap="5">
-                            <ChakraNextLink
-                                href="/small-groups"
-                                fontWeight={500}
-                                borderBottom={isSmallGroup ? "1px solid" : ""}
-                                borderColor={isSmallGroup ? "black" : ""}
-                                width="fit-content"
-                                _hover={{
-                                    textDecoration: "none",
-                                    borderBottom: "1px solid",
-                                    borderColor: isSmallGroup ? "brand.purple.200" : "black",
-                                    color: isSmallGroup ? "brand.purple.200" : "",
-                                }}
-                            >
-                                Small groups
-                            </ChakraNextLink>
-                            <Link
-                                href="https://bit.ly/thribe-x"
-                                rel="noopener noreferrer"
-                                isExternal
-                                target="_blank"
-                                _hover={{ textDecoration: "none" }}
-                            >
-                                <PrimaryButton>Join us</PrimaryButton>
-                            </Link>
+                            {isSmallGroup ? (
+                                <>
+                                    <ChakraNextLink
+                                        href="/small-groups"
+                                        fontWeight={500}
+                                        borderBottom={isSmallGroup ? "1px solid" : ""}
+                                        borderColor={isSmallGroup ? "black" : ""}
+                                        width="fit-content"
+                                        _hover={{
+                                            textDecoration: "none",
+                                            borderBottom: "1px solid",
+                                            borderColor: isSmallGroup
+                                                ? "brand.purple.200"
+                                                : "black",
+                                            color: isSmallGroup ? "brand.purple.200" : "",
+                                        }}
+                                    >
+                                        Small groups
+                                    </ChakraNextLink>
+                                    <Link
+                                        href="https://bit.ly/thribe-x"
+                                        rel="noopener noreferrer"
+                                        isExternal
+                                        target="_blank"
+                                        _hover={{ textDecoration: "none" }}
+                                    >
+                                        <PrimaryButton>Join us</PrimaryButton>
+                                    </Link>
+                                </>
+                            ) : (
+                                <ChakraNextLink href="/small-groups">
+                                    <SecondaryButton>Small groups</SecondaryButton>
+                                </ChakraNextLink>
+                            )}
                         </Flex>
                     </DrawerBody>
                 </DrawerContent>

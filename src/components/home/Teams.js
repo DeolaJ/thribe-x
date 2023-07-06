@@ -25,7 +25,7 @@ const teams = [
         icon: SiSoundcharts,
     },
     {
-        name: "Thribe-W Worship",
+        name: "Thribe-X Worship",
         icon: GiMicrophone,
     },
     {
@@ -62,7 +62,7 @@ function Teams({ ...props }) {
                     <Box position="relative" padding={{ md: "10" }}>
                         <Divider borderColor="black" />
                         <AbsoluteCenter px="4" bgColor="brand.orange.100">
-                            Teams
+                            Top Units
                         </AbsoluteCenter>
                     </Box>
                 </Heading>
