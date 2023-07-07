@@ -3,7 +3,11 @@ import { Heading, Text, Box, ButtonGroup, Link, Grid, GridItem } from "@chakra-u
 
 import SecondaryButton from "../button/SecondaryButton";
 
+import useLogEvent from "../../hooks/useLogEvent";
+
 function Hero() {
+    const logEvent = useLogEvent();
+
     return (
         <Box
             as="section"
@@ -50,7 +54,16 @@ function Hero() {
                                 fontSize="lg"
                                 _hover={{ textDecoration: "none" }}
                             >
-                                <SecondaryButton size="lg">Register</SecondaryButton>
+                                <SecondaryButton
+                                    size="lg"
+                                    onClick={() => {
+                                        logEvent({
+                                            action: "apply_to_small_groups",
+                                        });
+                                    }}
+                                >
+                                    Register
+                                </SecondaryButton>
                             </Link>
                         </ButtonGroup>
                     </Box>

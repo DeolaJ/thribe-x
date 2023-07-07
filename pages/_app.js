@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { ChakraProvider, Box } from "@chakra-ui/react";
+import PlausibleProvider from "next-plausible";
 import { AnimatePresence } from "framer-motion";
 
 import { theme } from "../styles/theme";
@@ -20,7 +21,9 @@ export default function App({ Component, pageProps }) {
                         bgRepeat={{ base: "repeat", md: "round" }}
                         backgroundSize={{ base: "1000px 60vh", xl: "initial" }}
                     >
-                        <Component {...pageProps} />
+                        <PlausibleProvider domain="thribe-x.com" enabled selfHosted>
+                            <Component {...pageProps} />
+                        </PlausibleProvider>
                     </Box>
                 </AnimatePresence>
             </ChakraProvider>

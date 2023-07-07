@@ -3,7 +3,11 @@ import { Text, Box, Link } from "@chakra-ui/react";
 
 import SecondaryButton from "../button/SecondaryButton";
 
+import useLogEvent from "../../hooks/useLogEvent";
+
 function Contact({ message, ...props }) {
+    const logEvent = useLogEvent();
+
     return (
         <Box
             as="section"
@@ -44,7 +48,16 @@ function Contact({ message, ...props }) {
                             fontSize="sm"
                             _hover={{ textDecoration: "none" }}
                         >
-                            <SecondaryButton size="lg">Register Now</SecondaryButton>
+                            <SecondaryButton
+                                size="lg"
+                                onClick={() => {
+                                    logEvent({
+                                        action: "apply_to_small_groups",
+                                    });
+                                }}
+                            >
+                                Register Now
+                            </SecondaryButton>
                         </Link>
                     </Text>
                 </Box>
