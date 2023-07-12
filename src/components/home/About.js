@@ -20,9 +20,9 @@ function About({ ...props }) {
                 >
                     <Image
                         alt="picture of lady showing our mantra"
-                        src="https://res.cloudinary.com/dzpntisxj/image/upload/v1680716897/thribe-x/fill-your-space_nsr3cm.png"
-                        width={700}
-                        height={840}
+                        src="https://res.cloudinary.com/dzpntisxj/image/upload/v1689153891/thribe-x/findyourplace_eynxwi.jpg"
+                        width={2250}
+                        height={2700}
                     />
                 </GridItem>
                 <GridItem>

@@ -13,12 +13,12 @@ function Contact({ ...props }) {
             {...props}
         >
             <Box mx="auto" maxW="8xl">
-                <Box maxW={{ base: "300px", lg: "350px" }} mb={{ base: "12", md: "12" }} mx="auto">
+                <Box maxW={{ base: "350px", lg: "400px" }} mb={{ base: "12", md: "12" }} mx="auto">
                     <Image
                         alt="picture of guy with confessions"
-                        src="https://res.cloudinary.com/dzpntisxj/image/upload/v1680716900/thribe-x/confessions_vepsyp.png"
-                        width={700}
-                        height={840}
+                        src="https://res.cloudinary.com/dzpntisxj/image/upload/v1689154760/thribe-x/confessions_jzc7qw.jpg"
+                        width={2250}
+                        height={2700}
                     />
                 </Box>
                 <Box>

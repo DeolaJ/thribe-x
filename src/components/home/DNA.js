@@ -136,9 +136,9 @@ function DNA({ ...props }) {
                     >
                         <Image
                             alt="picture of lady inspired by light"
-                            src="https://res.cloudinary.com/dzpntisxj/image/upload/v1680716895/thribe-x/light_tfuzxv.png"
-                            width={700}
-                            height={840}
+                            src="https://res.cloudinary.com/dzpntisxj/image/upload/v1689154760/thribe-x/insights_leurbt.jpg"
+                            width={2250}
+                            height={2700}
                         />
                     </GridItem>
                     <GridItem>
