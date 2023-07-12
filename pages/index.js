@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { Box, Text } from "@chakra-ui/react";
 
 import Header from "../src/components/Header";
 import Hero from "../src/components/home/Hero";
@@ -8,6 +9,7 @@ import DNA from "../src/components/home/DNA";
 import DrivingForce from "../src/components/home/DrivingForce";
 import Contact from "../src/components/Contact";
 import Footer from "../src/components/Footer";
+import ChakraNextLink from "../src/components/ChakraNextLink";
 
 export default function Home() {
     return (
@@ -34,6 +36,32 @@ export default function Home() {
                 <Teams bgColor="brand.orange.100" />
                 <DNA />
                 <DrivingForce bgColor="brand.purple.200" />
+
+                {/* Banner for Small groups */}
+                <Box
+                    as="section"
+                    pt={{ base: "14", md: "16" }}
+                    pb={{ base: "14", md: "16" }}
+                    px={{ base: "6", md: "12" }}
+                    // bg="brand.blue.600"
+                    bg="brand.yellow.100"
+                    mixBlendMode="multiply"
+                >
+                    <Box maxW={480} mx="auto">
+                        <Text
+                            fontSize={{ base: "lg", md: "2xl" }}
+                            fontWeight={500}
+                            textAlign="center"
+                        >
+                            {`Registrations to join a small group will close on July 30th. To register, click `}
+                            <ChakraNextLink href="/small-groups" fontWeight={700}>
+                                here
+                            </ChakraNextLink>
+                        </Text>
+                    </Box>
+                </Box>
+                {/*  */}
+
                 <Contact />
                 <Footer />
             </>
