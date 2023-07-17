@@ -40,7 +40,7 @@ const questions = [
     },
     {
         title: "When does the Glass House commence?",
-        description: "The Glass House commences on July 16, 2023.",
+        description: "The Glass House commences on July 30, 2023.",
     },
     {
         title: "When does registration end?",
