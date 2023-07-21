@@ -21,6 +21,7 @@ import SecondaryButton from "../../button/SecondaryButton";
 import FlyerPreview from "../FlyerPreview";
 
 import useUploadAvatar from "../../../hooks/useUploadAvatar";
+import useLogEvent from "../../../hooks/useLogEvent";
 
 import { getBucketUrl } from "../../../utils/image";
 import { cleanInput, generateAlphaNumericString, truncateText } from "../../../utils/format";
@@ -31,6 +32,7 @@ import orange from "../../../../public/images/background/blob-orange.svg";
 import blue from "../../../../public/images/background/blob-blue.svg";
 
 function GenerateFlyer() {
+    const logEvent = useLogEvent();
     const [avatar, setAvatar] = useState("");
     const [firstName, setFirstName] = useState("");
     const [isPreview, setIsPreview] = useState(false);
@@ -75,6 +77,9 @@ function GenerateFlyer() {
                                     confetti({
                                         particleCount: 100,
                                         spread: 160,
+                                    });
+                                    logEvent({
+                                        action: "generate_small_groups_flyer",
                                     });
                                 }}
                             >
