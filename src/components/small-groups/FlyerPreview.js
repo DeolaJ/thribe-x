@@ -54,8 +54,8 @@ function FlyerPreview({ isPreview, firstName, avatar, reset }) {
         >
             <AdvancedImage cldImg={myImage} />
             <Flex mt="8" gap="6" justifyContent="center">
-                <Button variant="unstyled" onClick={reset}>
-                    Reset
+                <Button variant="unstyled" onClick={reset} _hover={{ textDecoration: "underline" }}>
+                    Restart
                 </Button>
                 <Link href={downloadLink}>
                     <SecondaryButton>Download</SecondaryButton>
