@@ -9,6 +9,8 @@ import WhyJoinUs from "../../src/components/small-groups/WhyJoinUs";
 import Contact from "../../src/components/small-groups/Contact";
 import Groups from "../../src/components/small-groups/Groups";
 import FAQs from "../../src/components/small-groups/FAQs";
+import { Box, Text } from "@chakra-ui/react";
+import ChakraNextLink from "../../src/components/ChakraNextLink";
 
 export default function SmallGroups() {
     return (
@@ -30,6 +32,29 @@ export default function SmallGroups() {
                 <About />
                 <WhyJoinUs />
                 <Groups />
+                {/* Banner for Small groups */}
+                <Box
+                    as="section"
+                    pt={{ base: "10", md: "12" }}
+                    pb={{ base: "10", md: "12" }}
+                    px={{ base: "6", md: "12" }}
+                    // bg="brand.blue.600"
+                    bg="brand.yellow.100"
+                    mixBlendMode="multiply"
+                >
+                    <Box maxW={480} mx="auto">
+                        <Text
+                            fontSize={{ base: "lg", md: "xl" }}
+                            fontWeight={500}
+                            textAlign="center"
+                        >
+                            {`If you have registered, feel free to generate a social media flyer `}
+                            <ChakraNextLink href="/small-groups/flyers" fontWeight={700}>
+                                here
+                            </ChakraNextLink>
+                        </Text>
+                    </Box>
+                </Box>
                 <FAQs />
                 <Contact />
                 <Footer />
