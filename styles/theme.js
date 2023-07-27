@@ -30,6 +30,7 @@ export const theme = extendTheme({
                 500: "#dc785d", // For colorScheme solid color
                 600: "#e2842f",
                 700: "#e98b4d",
+                10: "#c94f47",
             },
             brown: {
                 500: "#c07253", // For colorScheme solid color
@@ -38,6 +39,7 @@ export const theme = extendTheme({
                 100: "#16a0ce",
                 500: "#84bcc0",
                 600: "#95d5dd",
+                10: "#1f303a",
             },
             gray: {
                 500: "#cebaab",
