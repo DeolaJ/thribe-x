@@ -1,7 +1,7 @@
 import { Flex, IconButton, Text, Link } from "@chakra-ui/react";
 import { FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
-function Footer({ ...props }) {
+function Footer({ isLight, ...props }) {
     const socials = [
         {
             type: "twitter",
@@ -26,7 +26,7 @@ function Footer({ ...props }) {
                 justifyContent={{ base: "flex-start", md: "space-between" }}
                 gap={{ base: "1", md: "6" }}
                 borderTop="1px solid"
-                borderColor="brand.gray.30"
+                borderColor={isLight ? "white" : "brand.gray.30"}
                 flexDir={{ base: "column-reverse", md: "row" }}
                 w="100%"
                 py={{ base: "5", md: "8" }}
@@ -37,7 +37,10 @@ function Footer({ ...props }) {
                     gap={{ base: "3", md: "6" }}
                     flexDir={{ base: "column", md: "row" }}
                 >
-                    <Text color="brand.gray.30" fontSize={{ base: "sm", md: "md" }}>
+                    <Text
+                        color={isLight ? "white" : "brand.gray.30"}
+                        fontSize={{ base: "sm", md: "md" }}
+                    >
                         © {new Date().getFullYear()} Thribe-X team.
                     </Text>
                 </Flex>
@@ -52,7 +55,7 @@ function Footer({ ...props }) {
                             <IconButton
                                 icon={social.icon}
                                 fontSize={{ base: "md", md: "xl" }}
-                                color="brand.gray.30"
+                                color={isLight ? "white" : "brand.gray.30"}
                                 bg="transparent"
                                 p="0"
                             />

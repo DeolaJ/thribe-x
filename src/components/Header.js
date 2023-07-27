@@ -22,7 +22,7 @@ import SecondaryButton from "./button/SecondaryButton";
 
 import logo from "../../public/logo.png";
 
-function Header({ isLight, ...props }) {
+function Header({ isLight, isMenuHidden, ...props }) {
     return (
         <Flex
             width="100%"
@@ -39,8 +39,12 @@ function Header({ isLight, ...props }) {
             >
                 <Image src={logo.src} alt="Thribe-X logo" width={logo.width} height={logo.height} />
             </ChakraNextLink>
-            <DesktopMenu isLight={isLight} />
-            <MobileMenu />
+            {!isMenuHidden && (
+                <>
+                    <DesktopMenu isLight={isLight} />
+                    <MobileMenu />
+                </>
+            )}
         </Flex>
     );
 }
