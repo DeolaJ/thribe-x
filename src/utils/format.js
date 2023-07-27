@@ -11,3 +11,11 @@ export const truncateText = (text, limit = 100) => {
     }
     return `${text.slice(0, limit)}...`;
 };
+
+export const formatUrl = (url) => {
+    if (!url) return "";
+    const httpsIdx = url.indexOf("https://");
+    const httpIdx = url.indexOf("http://");
+    if (httpsIdx !== -1 || httpIdx !== -1) return url;
+    return `https://${url}`;
+};
