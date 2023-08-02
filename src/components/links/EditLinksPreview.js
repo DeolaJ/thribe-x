@@ -184,13 +184,36 @@ function EditLink({ link }) {
                         alignItems="flex-start"
                         display="flex"
                         flexDir="column"
+                        py="3"
                         gap="0.5"
                         minH="60px"
                     >
-                        <chakra.span textAlign="left" lineHeight="shorter">
+                        <chakra.span textAlign="left" fontSize="sm" lineHeight="shorter">
                             {link.title}
                         </chakra.span>
-                        <chakra.span opacity="0.5" fontWeight={400} fontSize="sm">
+                        <chakra.span
+                            textAlign="left"
+                            opacity="0.5"
+                            fontWeight={400}
+                            fontSize="sm"
+                            wordBreak="break-all"
+                            sx={{
+                                whiteSpace: "nowrap",
+                                maxWidth: "350px",
+                                WebkitLineClamp: 1,
+                                WebkitBoxOrient: "vertical",
+                                overflow: "hidden",
+                                textOverflow: "ellipsis",
+
+                                "@media (max-width: 600px)": {
+                                    maxWidth: "220px",
+                                },
+
+                                "@media (max-width: 400px)": {
+                                    maxWidth: "150px",
+                                },
+                            }}
+                        >
                             {link.url}
                         </chakra.span>
                     </ShareButton>
