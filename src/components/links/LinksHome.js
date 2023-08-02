@@ -18,7 +18,7 @@ function LinksHome({ initialLinks }) {
             px={{ base: "6", md: "12" }}
             minH="75vh"
         >
-            <Box maxW={500} mx="auto">
+            <Box maxW={550} mx="auto">
                 <Text fontSize="lg" fontWeight={700} textAlign="center" mb="1">
                     Thribe-X Links
                 </Text>
@@ -27,7 +27,7 @@ function LinksHome({ initialLinks }) {
                     mb="6"
                     textAlign="center"
                     lineHeight="shorter"
-                    maxW={350}
+                    maxW={450}
                     mx="auto"
                 >
                     {`A Tribe of young hearts for God, dedicated to 
@@ -55,7 +55,7 @@ function LinkItem({ info }) {
                     target="_blank"
                     w="100%"
                 >
-                    <ShareButton>{info.title}</ShareButton>
+                    <ShareButton fontSize={{ base: "sm", md: "md" }}>{info.title}</ShareButton>
                 </ChakraNextLink>
             ) : (
                 <Link
@@ -65,7 +65,7 @@ function LinkItem({ info }) {
                     target="_blank"
                     w="100%"
                 >
-                    <ShareButton>{info.title}</ShareButton>
+                    <ShareButton fontSize={{ base: "sm", md: "md" }}>{info.title}</ShareButton>
                 </Link>
             )}
         </Box>

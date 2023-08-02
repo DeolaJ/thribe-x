@@ -19,7 +19,7 @@ function EditLinksHome({ initialLinks }) {
             px={{ base: "6", md: "12" }}
             minH="75vh"
         >
-            <Box maxW={500} mx="auto">
+            <Box maxW={550} mx="auto">
                 <EditPassword>
                     <Text fontSize="lg" mb="6" fontWeight={700}>
                         Update/Reorder Links
