@@ -19,10 +19,11 @@ function LinkItemForm({ order, link, cancel, size, isEditing }) {
     const { mutateAsync: updateLinksAsync, isLoading: isUpdatingLinks } = useUpdateLinks();
 
     const maxLength = 100;
+    const maxLengthLinks = 150;
 
     const LinksSchema = Yup.object().shape({
         title: Yup.string().max(maxLength, "Too long.").required("Required."),
-        url: Yup.string().max(maxLength, "Too long.").required("Required."),
+        url: Yup.string().max(maxLengthLinks, "Too long.").required("Required."),
     });
 
     async function handleSubmit(values, { resetForm }) {
@@ -103,7 +104,7 @@ function LinkItemForm({ order, link, cancel, size, isEditing }) {
                                             color={meta.error ? "red.500" : "gray"}
                                             fontSize="xs"
                                         >
-                                            {field.value?.length}/{maxLength}
+                                            {field.value?.length}/{maxLengthLinks}
                                         </chakra.span>
                                     </FormLabel>
                                     <Input {...field} placeholder="https://" />

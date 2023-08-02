@@ -8,7 +8,7 @@ function ShareButton({ children, ...props }) {
             px="4"
             border="1.5px solid"
             borderColor="brand.black.100"
-            bgColor="brand.orange.200"
+            bgColor="white"
             boxShadow="3px 3px 0 0 var(--chakra-colors-brand-black-100)"
             color="brand.black.100"
             lineHeight="short"
@@ -16,7 +16,7 @@ function ShareButton({ children, ...props }) {
             fontSize="md"
             whiteSpace="pre-line"
             h="auto"
-            minH="48px"
+            minH="54px"
             _hover={{ transform: "scale(1.03)", textDecoration: "none" }}
             _disabled={{ cursor: "not-allowed", opacity: "0.5" }}
             {...props}
