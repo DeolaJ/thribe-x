@@ -7,7 +7,12 @@ const generateSitemap = async () => {
 
     const currentDate = new Date().toISOString();
 
-    const staticPaths = await globby(["pages/**/*.js", "!pages/_*.js", "!pages/api"]);
+    const staticPaths = await globby([
+        "pages/**/*.js",
+        "!pages/_*.js",
+        "!pages/api",
+        "!pages/links/edit.js",
+    ]);
 
     const staticPages = staticPaths.map((staticPagePath) => {
         const path = staticPagePath.replace(/pages\/|.js|index/g, "");
