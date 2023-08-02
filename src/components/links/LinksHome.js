@@ -13,13 +13,13 @@ function LinksHome({ initialLinks }) {
     return (
         <Box
             as="section"
-            pt={{ base: "32", md: "20" }}
+            pt={{ base: "24", md: "20" }}
             pb={{ base: "24", md: "28" }}
             px={{ base: "6", md: "12" }}
             minH="75vh"
         >
             <Box maxW={500} mx="auto">
-                <Text fontSize="lg" fontWeight={700} textAlign="center">
+                <Text fontSize="lg" fontWeight={700} textAlign="center" mb="1">
                     Thribe-X Links
                 </Text>
                 <Text
