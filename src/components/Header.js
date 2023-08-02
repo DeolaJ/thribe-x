@@ -59,6 +59,18 @@ function DesktopMenu({ isLight }) {
             display={{ base: "none", md: "inherit" }}
             gap="8"
         >
+            <ChakraNextLink
+                href="/links"
+                fontWeight={500}
+                width="fit-content"
+                _hover={{
+                    textDecoration: "none",
+                    borderBottom: "1px solid",
+                    borderColor: "black",
+                }}
+            >
+                Links
+            </ChakraNextLink>
             {isSmallGroup ? (
                 <>
                     <ChakraNextLink
@@ -127,6 +139,18 @@ function MobileMenu() {
                     <DrawerCloseButton />
                     <DrawerBody display="flex" flexDir="column" justifyContent="center" margin="4">
                         <Flex flexDir="column" gap="5">
+                            <ChakraNextLink
+                                href="/links"
+                                fontWeight={500}
+                                width="fit-content"
+                                _hover={{
+                                    textDecoration: "none",
+                                    borderBottom: "1px solid",
+                                    borderColor: "black",
+                                }}
+                            >
+                                Links
+                            </ChakraNextLink>
                             {isSmallGroup ? (
                                 <>
                                     <ChakraNextLink
