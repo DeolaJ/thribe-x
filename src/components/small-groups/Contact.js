@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { Text, Box, Link } from "@chakra-ui/react";
+import { Text, Box } from "@chakra-ui/react";
 
-import SecondaryButton from "../button/SecondaryButton";
+// import SecondaryButton from "../button/SecondaryButton";
 
-import useLogEvent from "../../hooks/useLogEvent";
+// import useLogEvent from "../../hooks/useLogEvent";
 
-function Contact({ message, ...props }) {
-    const logEvent = useLogEvent();
+function Contact({ ...props }) {
+    // const logEvent = useLogEvent();
 
     return (
         <Box
@@ -37,9 +37,10 @@ function Contact({ message, ...props }) {
                         maxWidth={{ base: "400px", md: "600px" }}
                         mx="auto"
                     >
-                        {message || "What are you waiting for?"}
+                        Registrations are officially closed for this semester!!!
+                        {/* {message || "What are you waiting for?"} */}
                     </Text>
-                    <Text textAlign="center" mt="6">
+                    {/* <Text textAlign="center" mt="6">
                         <Link
                             href="https://forms.gle/Tw9eYJjykWzNg7689"
                             rel="noopener noreferrer"
@@ -59,7 +60,7 @@ function Contact({ message, ...props }) {
                                 Register Now
                             </SecondaryButton>
                         </Link>
-                    </Text>
+                    </Text> */}
                 </Box>
             </Box>
         </Box>

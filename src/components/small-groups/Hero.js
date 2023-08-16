@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { Heading, Text, Box, ButtonGroup, Link, Grid, GridItem } from "@chakra-ui/react";
+import { Heading, Text, Box, Grid, GridItem } from "@chakra-ui/react";
 
-import SecondaryButton from "../button/SecondaryButton";
+// import SecondaryButton from "../button/SecondaryButton";
 
-import useLogEvent from "../../hooks/useLogEvent";
+// import useLogEvent from "../../hooks/useLogEvent";
 
 function Hero() {
-    const logEvent = useLogEvent();
+    // const logEvent = useLogEvent();
 
     return (
         <Box
@@ -33,15 +33,24 @@ function Hero() {
                             The Glass House
                         </Heading>
                         <Text
-                            fontSize={{ base: "md", md: "xl" }}
+                            fontSize={{ base: "md", md: "lg" }}
                             mt="3"
                             mb="5"
                             lineHeight="shorter"
                             fontWeight={500}
+                            maxWidth={{ md: "450" }}
                         >
-                            Thribe-X small groups
+                            Registrations are officially closed for this semester!!!
+                            <br />
+                            <br />
+                            We will open up registrations again in the future, stay connected with
+                            us for updates and announcements about our next registration period.
+                            <br />
+                            <br />
+                            If you have any questions or would like to learn more about our group,
+                            feel free to reach out.
                         </Text>
-                        <ButtonGroup
+                        {/* <ButtonGroup
                             alignItems="flex-start"
                             gap="3"
                             flexDir={{ base: "column", lg: "row" }}
@@ -65,7 +74,7 @@ function Hero() {
                                     Register
                                 </SecondaryButton>
                             </Link>
-                        </ButtonGroup>
+                        </ButtonGroup> */}
                     </Box>
                 </GridItem>
                 <GridItem h="100%" order={{ base: "-1", md: "1" }}>
