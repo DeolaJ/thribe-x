@@ -43,9 +43,12 @@
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.6.0",
+    "autoprefixer": "^10.4.20",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "prettier": "^2.8.7"
+    "postcss": "^8.4.45",
+    "prettier": "^2.8.7",
+    "tailwindcss": "^3.4.11"
   }
 }

@@ -12,6 +12,7 @@ import { AnimatePresence } from "framer-motion";
 import { theme } from "../styles/theme";
 
 import scatter from "../public/images/background/scatter.svg";
+import "../globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
     const [supabaseClient] = useState(() => createPagesBrowserClient());
