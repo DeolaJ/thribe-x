@@ -5,13 +5,17 @@ import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import { Hydrate, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { ChakraProvider, Box } from "@chakra-ui/react";
+import { ChakraProvider, 
+    // Box
+ }
+     from "@chakra-ui/react";
 import PlausibleProvider from "next-plausible";
 import { AnimatePresence } from "framer-motion";
 
-import { theme } from "../styles/theme";
+import { poppins, theme } from "../styles/theme";
+import "../styles/global.css"
 
-import scatter from "../public/images/background/scatter.svg";
+// import scatter from "../public/images/background/scatter.svg";
 
 export default function App({ Component, pageProps }: AppProps) {
     const [supabaseClient] = useState(() => createPagesBrowserClient());
@@ -41,15 +45,17 @@ export default function App({ Component, pageProps }: AppProps) {
                     <Hydrate state={pageProps.dehydratedState}>
                         <ChakraProvider theme={theme}>
                             <AnimatePresence mode="wait">
-                                <Box
+                                {/* <Box
                                     bgImage={`url(${scatter.src})`}
                                     bgRepeat={{ base: "repeat", md: "round" }}
                                     backgroundSize={{ base: "1000px 60vh", xl: "initial" }}
-                                >
+                                > */}
+                                        <div className={`${poppins.variable}`}>
                                     <PlausibleProvider domain="thribe-x.com" enabled selfHosted>
-                                        <Component {...pageProps} />
+                                            <Component {...pageProps} />
                                     </PlausibleProvider>
-                                </Box>
+                                        </div>
+                                {/* </Box> */}
                             </AnimatePresence>
                         </ChakraProvider>
                     </Hydrate>

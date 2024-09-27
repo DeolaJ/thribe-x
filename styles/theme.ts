@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import { DM_Sans, PT_Serif } from "next/font/google";
+import { DM_Sans, PT_Serif, Poppins } from "next/font/google";
 
 export const dmSans = DM_Sans({
     subsets: ["latin"],
@@ -7,6 +7,14 @@ export const dmSans = DM_Sans({
     weight: ["400", "500", "700"],
     style: ["normal", "italic"],
     fallback: ["system-ui", "arial"],
+});
+export const poppins = Poppins({
+    subsets: ["latin"],
+    variable: "--font-poppins",
+    weight: ["300","400", "500", "600", "700", '900'],
+    style: ["normal", "italic"],
+    fallback: ["system-ui", "arial"],
+
 });
 
 export const ptSerif = PT_Serif({
