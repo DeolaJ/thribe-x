@@ -8,7 +8,7 @@ const nextConfig = {
         return config;
     },
     images: {
-        domains: ["res.cloudinary.com"],
+        domains: ["res.cloudinary.com", "flagcdn.com", "upload.wikimedia.org"],
     },
     typescript: {
         ignoreBuildErrors: true,
